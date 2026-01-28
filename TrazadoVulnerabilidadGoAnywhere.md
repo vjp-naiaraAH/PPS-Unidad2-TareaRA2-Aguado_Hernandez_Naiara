@@ -3,34 +3,43 @@
 # Índice
 
 - [1. Objetivos del trazado](#1-objetivos-del-trazado) 🎯  
-- [2. Punto de partida: Artículo de INCIBE](#2-punto-de-partida-artículo-de-incibe) 🇪🇸  
-  - [2.1 ¿Qué es INCIBE?](#21-qué-es-incibe)  
+
+- [2. Punto de partida: Artículo de INCIBE](#2-punto-de-partida-articulo-de-incibe) 🇪🇸  
+  - [2.1 Que es INCIBE](#21-que-es-incibe)  
   - [2.2 Productos afectados y severidad](#22-productos-afectados-y-severidad) ⚠️  
-- [3. Información del fabricante (Fortra)](#3-información-del-fabricante-fortra) 🏭  
-  - [3.1 ¿Qué es Fortra?](#31-qué-es-fortra)  
-  - [3.2 Descripción técnica de la vulnerabilidad](#32-descripción-técnica-de-la-vulnerabilidad) 🧩  
+
+- [3. Informacion del fabricante (Fortra)](#3-informacion-del-fabricante-fortra) 🏭  
+  - [3.1 Que es Fortra](#31-que-es-fortra)  
+  - [3.2 Descripcion tecnica de la vulnerabilidad](#32-descripcion-tecnica-de-la-vulnerabilidad) 🧩  
   - [3.3 Impacto real](#33-impacto-real) 💥  
-  - [3.4 Solución y mitigaciones recomendadas](#34-solución-y-mitigaciones-recomendadas) 🛡️  
-- [4. Información sobre la vulnerabilidad (CVE y NVD)](#4-información-sobre-la-vulnerabilidad-cve-y-nvd) 📚  
-  - [4.1 Página CVE.org](#41-página-cveorg)  
-    - [4.1.1 ¿Qué es CVE.org?](#411-qué-es-cveorg)  
-  - [4.2 Página NVD (NIST)](#42-página-nvd-nist)  
-    - [4.2.1 ¿Qué es NVD?](#421-qué-es-nvd)  
+  - [3.4 Solucion recomendada](#34-solucion-recomendada) 🛡️  
+
+- [4. Informacion sobre la vulnerabilidad (CVE y NVD)](#4-informacion-sobre-la-vulnerabilidad-cve-y-nvd) 📚  
+  - [4.1 Pagina CVEorg](#41-pagina-cveorg)  
+    - [4.1.1 Que es CVEorg](#411-que-es-cveorg)  
+  - [4.2 Pagina NVD (NIST)](#42-pagina-nvd-nist)  
+    - [4.2.1 Que es NVD](#421-que-es-nvd)  
+
 - [5. Criticidad y vector CVSS](#5-criticidad-y-vector-cvss) 🔥  
-  - [5.1 Desglose de métricas CVSS](#51-desglose-de-métricas-cvss) 📊  
+  - [5.1 Desglose de metricas CVSS](#51-desglose-de-metricas-cvss) 📊  
+
 - [6. Debilidades explotadas (CWE)](#6-debilidades-explotadas-cwe) 🧠  
-  - [6.1 ¿Qué es CWE?](#61-qué-es-cwe)  
-  - [6.2 CWE-425: Direct Request / Forced Browsing](#62-cwe-425-direct-request--forced-browsing)  
-  - [6.3 Consecuencias típicas](#63-consecuencias-típicas)  
+  - [6.1 Que es CWE](#61-que-es-cwe)  
+  - [6.2 CWE-425 direct request forced browsing](#62-cwe-425-direct-request-forced-browsing)  
+  - [6.3 Consecuencias tipicas](#63-consecuencias-tipicas)  
   - [6.4 Mitigaciones recomendadas](#64-mitigaciones-recomendadas)  
   - [6.5 Relaciones con otras debilidades](#65-relaciones-con-otras-debilidades)  
+
 - [7. Patrones de ataque relacionados (CAPEC)](#7-patrones-de-ataque-relacionados-capec) 🎯  
-  - [7.1 ¿Qué es CAPEC?](#71-qué-es-capec)  
-  - [7.2 CAPEC-143: Detect Unpublicized Web Pages](#72-capec-143-detect-unpublicized-web-pages)  
-  - [7.3 CAPEC-127: Directory Indexing](#73-capec-127-directory-indexing)  
-- [8. Registro CVE en formato JSON](#8-registro-cve-en-formato-json) 🗂️  
-  - [8.1 ¿Qué es el CVE Record en JSON?](#81-qué-es-el-cve-record-en-json)  
-- [9. Conclusiones y resumen final](#9-conclusiones-y-resumen-final) 📝  
+  - [7.1 Que es CAPEC](#71-que-es-capec)  
+  - [7.2 CAPEC-143 detect unpublicized web pages](#72-capec-143-detect-unpublicized-web-pages)  
+  - [7.3 CAPEC-127 directory indexing](#73-capec-127-directory-indexing)  
+
+- [8. Registro CVE en JSON](#8-registro-cve-en-json) 🗂️  
+  - [8.1 Que es el CVE record en JSON](#81-que-es-el-cve-record-en-json)  
+
+- [9. Conclusiones resumen final](#9-conclusiones-resumen-final) 📝  
+ 
 
 ## Objetivos del Trazado
 - Conocer las listas y organismos clave de ciberseguridad (CVE, NVD, CWE, CAPEC, CVSS).
