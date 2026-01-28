@@ -50,9 +50,9 @@ Existe un endpoint de configuración inicial (`InitialAccountSetup.xhtml`) que n
 - Actualizar inmediatamente a 7.4.1 o superior.  
 - En instalaciones existentes sin actualizar: eliminar o renombrar el archivo `InitialAccountSetup.xhtml`.
 
-![Página principal de Fortra con gravedad y vulnerabilidad](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img3.png)  
-![Página de Fortra con notas y vulnerabilidades](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img4.png)  
-![Notas de vulnerabilidad de Fortra y referencias](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img5.png)
+![Página principal de Fortra con gravedad y vulnerabilidad](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img3.png)
+![Página de Fortra con notas y vulnerabilidades](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img4.png)
+![Notas de vulnerabilidad de Fortra y referencias](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img5.png)
 
 ---
 
@@ -66,7 +66,7 @@ CVE (Common Vulnerabilities and Exposures) es un catálogo público mantenido po
 En [https://www.cve.org/CVERecord?id=CVE-2024-0204](https://www.cve.org/CVERecord?id=CVE-2024-0204) encontramos el registro oficial: descripción básica, estado (Published) y enlaces a fuentes primarias (Fortra, NVD).  
 Desde aquí se puede descargar el **CVE Record** en JSON.
 
-![Página de CVE.org con el botón "View JSON" destacado](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img7.png)
+![Página de CVE.org con el botón "View JSON" destacado](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img7.png)
 
 ### Página NVD (NIST)
 
@@ -79,9 +79,9 @@ En [https://nvd.nist.gov/vuln/detail/CVE-2024-0204](https://nvd.nist.gov/vuln/de
 - Vector completo y descripción ampliada  
 - Esto indica que la aplicación expone funcionalidades críticas sin control de acceso adecuado.
 
-![Pantallazo principal de la página NVD](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img8.png)  
-![Descripción, métricas y base de puntuación en NVD](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img9.png)  
-![Enumeración de vulnerabilidades en NVD](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img10.png)
+![Pantallazo principal de la página NVD](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img8.png)
+![Descripción, métricas y base de puntuación en NVD](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img9.png)  
+![Enumeración de vulnerabilidades en NVD](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img10.png)
 
 ---
 
@@ -130,9 +130,9 @@ La aplicación permite acceder directamente a URLs internas o de configuración 
 **Relaciones**: Hijo de CWE-862 (Missing Authorization).  
 **CAPECs relacionados**: CAPEC-127, CAPEC-143, CAPEC-144, entre otros.
 
-![Página principal de CWE-425](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img11.png)  
-![Posibles mitigaciones en CWE-425](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img12.png)  
-![Relaciones en CWE-425](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img13.png)
+![Página principal de CWE-425](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img11.png)
+![Posibles mitigaciones en CWE-425](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img12.png)
+![Relaciones en CWE-425](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img13.png)
 
 ---
 
@@ -147,14 +147,14 @@ CAPEC (Common Attack Pattern Enumeration and Classification) es otro catálogo d
   **Consecuencias**: Bypass de autenticación, acceso a funcionalidades críticas.  
   **Mitigación**: No exponer endpoints innecesarios, usar autenticación en profundidad.
 
-![Página principal de CAPEC-143](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img14.png)
+![Página principal de CAPEC-143](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img14.png)
 
 - **CAPEC-127** [enlace](https://capec.mitre.org/data/definitions/127.html): *Directory Indexing*  
   Similar, pero enfocado en listar contenidos de directorios mal configurados.  
   **Habilidades**: Muy bajas (herramientas automáticas o fuzzing simple).  
   **Mitigación**: Deshabilitar directory listing en el servidor web.
 
-![Página principal de CAPEC-127](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img15.png)
+![Página principal de CAPEC-127](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img15.png)
 
 ---
 
@@ -172,7 +172,7 @@ Contiene:
 - Weaknesses (CWE-425)
 - Posible CPE (plataformas afectadas)
 
-![Vista del JSON con secciones clave](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img16.png)
+![Vista del JSON con secciones clave](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img16.png)
 
 ---
 
