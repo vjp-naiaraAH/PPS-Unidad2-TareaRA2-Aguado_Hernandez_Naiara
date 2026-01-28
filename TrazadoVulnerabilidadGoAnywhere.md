@@ -1,44 +1,21 @@
 # Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT
-# Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT
+
 # Índice
 
-- [1. Objetivos del trazado](#1-objetivos-del-trazado) 🎯  
-
-- [2. Punto de partida: Artículo de INCIBE](#2-punto-de-partida-articulo-de-incibe) 🇪🇸  
-  - [2.1 Que es INCIBE](#21-que-es-incibe)  
-  - [2.2 Productos afectados y severidad](#22-productos-afectados-y-severidad) ⚠️  
-
-- [3. Informacion del fabricante (Fortra)](#3-informacion-del-fabricante-fortra) 🏭  
-  - [3.1 Que es Fortra](#31-que-es-fortra)  
-  - [3.2 Descripcion tecnica de la vulnerabilidad](#32-descripcion-tecnica-de-la-vulnerabilidad) 🧩  
-  - [3.3 Impacto real](#33-impacto-real) 💥  
-  - [3.4 Solucion recomendada](#34-solucion-recomendada) 🛡️  
-
-- [4. Informacion sobre la vulnerabilidad (CVE y NVD)](#4-informacion-sobre-la-vulnerabilidad-cve-y-nvd) 📚  
-  - [4.1 Pagina CVEorg](#41-pagina-cveorg)  
-    - [4.1.1 Que es CVEorg](#411-que-es-cveorg)  
-  - [4.2 Pagina NVD (NIST)](#42-pagina-nvd-nist)  
-    - [4.2.1 Que es NVD](#421-que-es-nvd)  
-
-- [5. Criticidad y vector CVSS](#5-criticidad-y-vector-cvss) 🔥  
-  - [5.1 Desglose de metricas CVSS](#51-desglose-de-metricas-cvss) 📊  
-
-- [6. Debilidades explotadas (CWE)](#6-debilidades-explotadas-cwe) 🧠  
-  - [6.1 Que es CWE](#61-que-es-cwe)  
-  - [6.2 CWE-425 direct request forced browsing](#62-cwe-425-direct-request-forced-browsing)  
-  - [6.3 Consecuencias tipicas](#63-consecuencias-tipicas)  
-  - [6.4 Mitigaciones recomendadas](#64-mitigaciones-recomendadas)  
-  - [6.5 Relaciones con otras debilidades](#65-relaciones-con-otras-debilidades)  
-
-- [7. Patrones de ataque relacionados (CAPEC)](#7-patrones-de-ataque-relacionados-capec) 🎯  
-  - [7.1 Que es CAPEC](#71-que-es-capec)  
-  - [7.2 CAPEC-143 detect unpublicized web pages](#72-capec-143-detect-unpublicized-web-pages)  
-  - [7.3 CAPEC-127 directory indexing](#73-capec-127-directory-indexing)  
-
-- [8. Registro CVE en JSON](#8-registro-cve-en-json) 🗂️  
-  - [8.1 Que es el CVE record en JSON](#81-que-es-el-cve-record-en-json)  
-
-- [9. Conclusiones resumen final](#9-conclusiones-resumen-final) 📝  
+- [Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT](#trazado-de-la-vulnerabilidad-cve-2024-0204-en-goanywhere-mft)
+- [Índice](#índice)
+  - [Objetivos del Trazado](#objetivos-del-trazado)
+  - [Punto de Partida: Artículo de INCIBE](#punto-de-partida-artículo-de-incibe)
+  - [Información del Fabricante (Fortra)](#información-del-fabricante-fortra)
+  - [Información sobre la Vulnerabilidad (CVE y NVD)](#información-sobre-la-vulnerabilidad-cve-y-nvd)
+    - [Página CVE.org](#página-cveorg)
+    - [Página NVD (NIST)](#página-nvd-nist)
+  - [Criticidad y Vector CVSS](#criticidad-y-vector-cvss)
+  - [Debilidades Explotadas (CWE)](#debilidades-explotadas-cwe)
+  - [Patrones de Ataque Relacionados (CAPEC)](#patrones-de-ataque-relacionados-capec)
+  - [Registro CVE en JSON](#registro-cve-en-json)
+  - [Conclusiones / Resumen Final](#conclusiones--resumen-final)
+ 
  
 
 ## Objetivos del Trazado
