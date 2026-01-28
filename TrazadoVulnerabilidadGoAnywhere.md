@@ -188,6 +188,7 @@ CAPEC (Common Attack Pattern Enumeration and Classification) es otro catálogo d
 Es la representación estructurada (formato JSON) del registro CVE, mantenida por MITRE/CNA. Se usa para alimentación automática de herramientas de seguridad (scanners, SIEM, bases de datos internas).
 
 Enlace: [https://cveawg.mitre.org/api/cve/CVE-2024-0204](https://cveawg.mitre.org/api/cve/CVE-2024-0204)
+Enlace: [VE-2024-0204.json](https://github.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/blob/main/archivos/CVE-2024-0204.json)
 
 Contiene:
 - Metadatos (fecha de publicación, estado)
