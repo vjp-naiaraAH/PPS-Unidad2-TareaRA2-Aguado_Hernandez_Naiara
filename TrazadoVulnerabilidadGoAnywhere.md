@@ -22,9 +22,9 @@ No se menciona el CVE en el aviso, por lo que el siguiente paso lógico es consu
 **Severidad**: Crítica (nivel 5/5 según clasificación de INCIBE).  
 **Riesgo principal**: Posible toma de control completa del servidor MFT, robo masivo de archivos transferidos o implantación de malware.
 
-![Pantallazo principal de la página INCIBE](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img1.png)
+![Pantallazo principal de la página INCIBE](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img1.png)
 
-![Pantallazo del listado de referencias en INCIBE](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TrazadoDeVulnerabilidad/refs/heads/main/images/img2.png)
+![Pantallazo del listado de referencias en INCIBE](https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img2.png)
 
 ---
 
