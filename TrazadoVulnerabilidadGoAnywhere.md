@@ -1,41 +1,28 @@
 # Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT
 
 # Índice
-
-- [Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT](#trazado-de-la-vulnerabilidad-cve-2024-0204-en-goanywhere-mft) 🧩  
-
 - [Objetivos del Trazado](#objetivos-del-trazado) 🎯  
-
 - [Punto de Partida: Artículo de INCIBE](#punto-de-partida-articulo-de-incibe) 🇪🇸  
   - [¿Qué es INCIBE?](#que-es-incibe) ℹ️  
   - [Productos afectados](#productos-afectados) ⚠️  
-
 - [Información del Fabricante (Fortra)](#informacion-del-fabricante-fortra) 🏭  
   - [¿Qué es Fortra?](#que-es-fortra)  
   - [Descripción detallada](#descripcion-detallada) 🧩  
   - [Impacto real](#impacto-real) 💥  
   - [Solución recomendada](#solucion-recomendada) 🛡️  
-
 - [Información sobre la Vulnerabilidad (CVE y NVD)](#informacion-sobre-la-vulnerabilidad-cve-y-nvd) 📚  
   - [Página CVE.org](#pagina-cveorg)  
   - [Página NVD (NIST)](#pagina-nvd-nist)  
-
 - [Criticidad y Vector CVSS](#criticidad-y-vector-cvss) 🔥  
-
 - [Debilidades Explotadas (CWE)](#debilidades-explotadas-cwe) 🧠  
   - [¿Qué es CWE?](#que-es-cwe)  
   - [CWE-425](#cwe-425)  
-
 - [Patrones de Ataque Relacionados (CAPEC)](#patrones-de-ataque-relacionados-capec) 🎯  
   - [CAPEC-143](#capec-143)  
   - [CAPEC-127](#capec-127)  
-
 - [Registro CVE en JSON](#registro-cve-en-json) 🗂️  
-
 - [Conclusiones / Resumen Final](#conclusiones--resumen-final) 📝
-
- 
- 
+---
 
 ## Objetivos del Trazado
 - Conocer las listas y organismos clave de ciberseguridad (CVE, NVD, CWE, CAPEC, CVSS).
