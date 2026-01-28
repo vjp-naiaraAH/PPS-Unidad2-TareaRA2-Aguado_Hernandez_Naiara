@@ -124,4 +124,6 @@ Explicación por nivel (en el que trabajamos: Low)
 Impossible: Aunque el switch usa no_check por defecto, en nivel Impossible el propio reto cambia la lógica (usa consultas preparadas en lugar de concatenación), por lo que la inyección ya no funciona.
 
 ---
+## 5 Conclusión Y Recomendaciones 
+
 Gracias a este diseño, bWAPP permite practicar la misma vulnerabilidad (SQL Injection) en diferentes escenarios: desde un entorno totalmente inseguro (Low), pasando por filtros intermedios (Medium y High), hasta un contexto en el que la vulnerabilidad debería estar corregida (Impossible). Esto ayuda a entender cómo influyen las medidas de validación y sanitización del input en la explotación real de la aplicación.
