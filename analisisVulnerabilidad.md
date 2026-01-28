@@ -1,5 +1,5 @@
 # Análisis de Vulnerabilidad: SQL Injection (GET/Search) en bWAPP
-# Índice 📑
+# Índice
 
 - [1. Elección del reto](#1-elección-del-reto) 🔍  
 - [2. Demostración paso a paso](#2-demostración-paso-a-paso) 🧪  
