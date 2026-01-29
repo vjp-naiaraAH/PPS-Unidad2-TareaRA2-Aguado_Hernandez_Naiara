@@ -29,7 +29,14 @@ docs_dir: docs
 # -------------------------------------------------------------
 # TEMA (Opcional, pero común)
 # -------------------------------------------------------------
-# theme: 
-#   name: 'material' # Si usas el popular tema Material for MkDocs.
-#   # highlightjs: true
-#   # code_fences: true
+theme:
+  name: material           # ← Esto es lo que hace que quede bonito
+  palette:                 # Opcional: activa modo claro/oscuro automático
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
