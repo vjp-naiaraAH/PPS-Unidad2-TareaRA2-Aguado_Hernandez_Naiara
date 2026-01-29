@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>1. Trazado de vulnerabilidad - PPS-Unidad2-TareaRA-Aguado-Hernandez-Naiara</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">PPS-Unidad2-TareaRA-Aguado-Hernandez-Naiara</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">1. Trazado de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../analisisVulnerabilidad/" class="nav-link">2. Análisis de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ComprobacionRequisitosAplicacion_naiara/" class="nav-link">3. Comprobación requisitos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../reflexion/" class="nav-link">4. Reflexión</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../analisisVulnerabilidad/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#trazado-de-la-vulnerabilidad-cve-2024-0204-en-goanywhere-mft" class="nav-link">Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#indice" class="nav-link">Índice</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivos-del-trazado" class="nav-link">Objetivos del Trazado</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#punto-de-partida-articulo-de-incibe" class="nav-link">Punto de Partida: Artículo de INCIBE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#informacion-del-fabricante-fortra" class="nav-link">Información del Fabricante (Fortra)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#informacion-sobre-la-vulnerabilidad-cve-y-nvd" class="nav-link">Información sobre la Vulnerabilidad (CVE y NVD)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#criticidad-y-vector-cvss" class="nav-link">Criticidad y Vector CVSS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#debilidades-explotadas-cwe" class="nav-link">Debilidades Explotadas (CWE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#patrones-de-ataque-relacionados-capec" class="nav-link">Patrones de Ataque Relacionados (CAPEC)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#registro-cve-en-json" class="nav-link">Registro CVE en JSON</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusiones-resumen-final" class="nav-link">Conclusiones / Resumen Final</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="trazado-de-la-vulnerabilidad-cve-2024-0204-en-goanywhere-mft">Trazado de la Vulnerabilidad CVE-2024-0204 en GoAnywhere MFT</h1>
+<h1 id="indice">Índice</h1>
+<ul>
+<li><a href="#objetivos-del-trazado">Objetivos del Trazado</a> 🎯  </li>
+<li><a href="#punto-de-partida-articulo-de-incibe">Punto de Partida: Artículo de INCIBE</a> 🇪🇸  </li>
+<li><a href="#que-es-incibe">¿Qué es INCIBE?</a> ℹ️  </li>
+<li><a href="#productos-afectados">Productos afectados</a> ⚠️  </li>
+<li><a href="#informacion-del-fabricante-fortra">Información del Fabricante (Fortra)</a> 🏭  </li>
+<li><a href="#que-es-fortra">¿Qué es Fortra?</a>  </li>
+<li><a href="#descripcion-detallada">Descripción detallada</a> 🧩  </li>
+<li><a href="#impacto-real">Impacto real</a> 💥  </li>
+<li><a href="#solucion-recomendada">Solución recomendada</a> 🛡️  </li>
+<li><a href="#informacion-sobre-la-vulnerabilidad-cve-y-nvd">Información sobre la Vulnerabilidad (CVE y NVD)</a> 📚  </li>
+<li><a href="#pagina-cveorg">Página CVE.org</a>  </li>
+<li><a href="#pagina-nvd-nist">Página NVD (NIST)</a>  </li>
+<li><a href="#criticidad-y-vector-cvss">Criticidad y Vector CVSS</a> 🔥  </li>
+<li><a href="#debilidades-explotadas-cwe">Debilidades Explotadas (CWE)</a> 🧠  </li>
+<li><a href="#que-es-cwe">¿Qué es CWE?</a>  </li>
+<li><a href="#cwe-425">CWE-425</a>  </li>
+<li><a href="#patrones-de-ataque-relacionados-capec">Patrones de Ataque Relacionados (CAPEC)</a> 🎯  </li>
+<li><a href="#capec-143">CAPEC-143</a>  </li>
+<li><a href="#capec-127">CAPEC-127</a>  </li>
+<li><a href="#registro-cve-en-json">Registro CVE en JSON</a> 🗂️  </li>
+<li><a href="#conclusiones--resumen-final">Conclusiones / Resumen Final</a> 📝</li>
+</ul>
+<hr />
+<h2 id="objetivos-del-trazado">Objetivos del Trazado</h2>
+<ul>
+<li>Conocer las listas y organismos clave de ciberseguridad (CVE, NVD, CWE, CAPEC, CVSS).</li>
+<li>Realizar el trazado completo de una vulnerabilidad desde el aviso inicial hasta las debilidades y patrones de ataque.</li>
+<li>Analizar el riesgo, consecuencias y posibles mitigaciones.</li>
+</ul>
+<p>Esta vulnerabilidad permite a un atacante no autenticado crear un usuario administrador en GoAnywhere MFT, con grave riesgo de compromiso total del sistema.</p>
+<hr />
+<h2 id="punto-de-partida-articulo-de-incibe">Punto de Partida: Artículo de INCIBE</h2>
+<p><strong>¿Qué es INCIBE?</strong><br />
+INCIBE (Instituto Nacional de Ciberseguridad) es la agencia española encargada de la ciberseguridad, dependiente del Ministerio de Asuntos Económicos y Transformación Digital. Publica avisos, alertas y recomendaciones para empresas y ciudadanos.</p>
+<p>El artículo de INCIBE <a href="https://www.incibe.es/empresas/avisos/vulnerabilidad-critica-de-omision-de-autenticacion-en-goanywhere-mft-de-fortra">enlace</a> nos alerta de una vulnerabilidad <strong>crítica</strong> de omisión de autenticación en GoAnywhere MFT (Fortra). Un atacante puede crear un usuario administrador sin credenciales previas accediendo directamente al portal de administración.</p>
+<p>No se menciona el CVE en el aviso, por lo que el siguiente paso lógico es consultar la referencia principal: el advisory del fabricante.</p>
+<p><strong>Productos afectados</strong>: versiones 6.0.1 a 7.4.1 (incluidas).<br />
+<strong>Severidad</strong>: Crítica (nivel 5/5 según clasificación de INCIBE).<br />
+<strong>Riesgo principal</strong>: Posible toma de control completa del servidor MFT, robo masivo de archivos transferidos o implantación de malware.</p>
+<p><img alt="Pantallazo principal de la página INCIBE" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img1.png" /></p>
+<p><img alt="Pantallazo del listado de referencias en INCIBE" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img2.png" /></p>
+<hr />
+<h2 id="informacion-del-fabricante-fortra">Información del Fabricante (Fortra)</h2>
+<p><strong>¿Qué es Fortra?</strong><br />
+Fortra (anteriormente HelpSystems) es una empresa estadounidense especializada en software de automatización, transferencia segura de archivos (MFT) y ciberseguridad. GoAnywhere MFT es su solución principal para gestión segura de archivos.</p>
+<p>En el advisory oficial <a href="https://www.fortra.com/security/advisories/product-security/fi-2024-001">enlace</a> se identifica la vulnerabilidad como <strong>CVE-2024-0204</strong>.</p>
+<p><strong>Descripción detallada</strong>:<br />
+Existe un endpoint de configuración inicial (<code>InitialAccountSetup.xhtml</code>) que no requiere autenticación después de la instalación. Un atacante puede enviarle una petición POST con datos de un nuevo usuario administrador y tomar el control del sistema sin credenciales previas.</p>
+<p><strong>Debilidad principal</strong>: CWE-425 (Direct Request / Forced Browsing).<br />
+<strong>CVSS</strong>: 9.8 Crítico → vector CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H.</p>
+<p><strong>Impacto real</strong>:<br />
+- Creación de cuentas privilegiadas → acceso total a transferencias de archivos, credenciales almacenadas y configuración.<br />
+- Posible uso en campañas de ransomware (GoAnywhere ya fue explotado masivamente por Cl0p en 2023).<br />
+- Robo de datos sensibles de empresas que usan MFT para intercambio con proveedores.</p>
+<p><strong>Solución recomendada</strong>:<br />
+- Actualizar inmediatamente a 7.4.1 o superior.<br />
+- En instalaciones existentes sin actualizar: eliminar o renombrar el archivo <code>InitialAccountSetup.xhtml</code>.</p>
+<p><img alt="Página principal de Fortra con gravedad y vulnerabilidad" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img3.png" />
+<img alt="Página de Fortra con notas y vulnerabilidades" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img4.png" />
+<img alt="Notas de vulnerabilidad de Fortra y referencias" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img5.png" /></p>
+<hr />
+<h2 id="informacion-sobre-la-vulnerabilidad-cve-y-nvd">Información sobre la Vulnerabilidad (CVE y NVD)</h2>
+<h3 id="pagina-cveorg">Página CVE.org</h3>
+<p><strong>¿Qué es CVE.org?</strong><br />
+CVE (Common Vulnerabilities and Exposures) es un catálogo público mantenido por MITRE que asigna identificadores únicos (CVE-XXXX-XXXXX) a vulnerabilidades conocidas. Sirve como estándar global para referenciar fallos de seguridad.</p>
+<p>En <a href="https://www.cve.org/CVERecord?id=CVE-2024-0204">https://www.cve.org/CVERecord?id=CVE-2024-0204</a> encontramos el registro oficial: descripción básica, estado (Published) y enlaces a fuentes primarias (Fortra, NVD).<br />
+Desde aquí se puede descargar el <strong>CVE Record</strong> en JSON.</p>
+<p><img alt="Página de CVE.org con el botón &quot;View JSON&quot; destacado" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img7.png" /></p>
+<h3 id="pagina-nvd-nist">Página NVD (NIST)</h3>
+<p><strong>¿Qué es NVD?</strong><br />
+NVD (National Vulnerability Database) es la base de datos oficial del NIST (EE.UU.) que enriquece los CVE con análisis detallado: puntuación CVSS, CWE asociada, referencias y métricas de impacto.</p>
+<p>En <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0204">https://nvd.nist.gov/vuln/detail/CVE-2024-0204</a> se confirma:<br />
+- CVSS 9.8 Crítico<br />
+- CWE-425<br />
+- Vector completo y descripción ampliada<br />
+- Esto indica que la aplicación expone funcionalidades críticas sin control de acceso adecuado.</p>
+<p><img alt="Pantallazo principal de la página NVD" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img8.png" />
+<img alt="Descripción, métricas y base de puntuación en NVD" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img9.png" /><br />
+<img alt="Enumeración de vulnerabilidades en NVD" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img10.png" /></p>
+<hr />
+<h2 id="criticidad-y-vector-cvss">Criticidad y Vector CVSS</h2>
+<p><strong>Puntuación CVSS</strong>: 9.8 / 10 (Crítico)<br />
+<strong>Vector CVSS:3.1</strong>:
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</p>
+<p><strong>Desglose de métricas</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attack Vector (AV)</td>
+<td>Network</td>
+<td>Explotable remotamente por internet sin necesidad de acceso local.</td>
+</tr>
+<tr>
+<td>Attack Complexity (AC)</td>
+<td>Low</td>
+<td>No requiere condiciones especiales ni race conditions.</td>
+</tr>
+<tr>
+<td>Privileges Required (PR)</td>
+<td>None</td>
+<td>No necesita credenciales previas.</td>
+</tr>
+<tr>
+<td>User Interaction (UI)</td>
+<td>None</td>
+<td>No requiere que la víctima haga clic o interactúe.</td>
+</tr>
+<tr>
+<td>Scope (S)</td>
+<td>Unchanged</td>
+<td>El impacto no sale del componente vulnerable.</td>
+</tr>
+<tr>
+<td>Confidentiality (C)</td>
+<td>High</td>
+<td>Posible exposición total de datos transferidos y almacenados.</td>
+</tr>
+<tr>
+<td>Integrity (I)</td>
+<td>High</td>
+<td>Posible modificación de archivos, configuración o inserción de backdoors.</td>
+</tr>
+<tr>
+<td>Availability (A)</td>
+<td>High</td>
+<td>Posible interrupción del servicio MFT (DoS o eliminación de datos).</td>
+</tr>
+</tbody>
+</table>
+<p>Esta combinación hace que la vulnerabilidad sea extremadamente peligrosa en entornos expuestos a internet.</p>
+<hr />
+<h2 id="debilidades-explotadas-cwe">Debilidades Explotadas (CWE)</h2>
+<p><strong>¿Qué es CWE?</strong><br />
+CWE (Common Weakness Enumeration) es un catálogo mantenido por MITRE que clasifica tipos de debilidades de software (fallos de diseño o implementación) que pueden dar lugar a vulnerabilidades.</p>
+<p><strong>CWE-425</strong> <a href="https://cwe.mitre.org/data/definitions/425.html">enlace</a>: <em>Direct Request</em> o <em>Forced Browsing</em>.<br />
+La aplicación permite acceder directamente a URLs internas o de configuración que deberían estar protegidas por autenticación o sesión activa.</p>
+<p><strong>Consecuencias típicas</strong>:<br />
+- Acceso no autorizado a paneles administrativos<br />
+- Creación/eliminación de usuarios<br />
+- Exposición o modificación de datos sensibles<br />
+- Escalada a control total del sistema</p>
+<p><strong>Mitigaciones recomendadas</strong>:
+- <strong>Arquitectura y diseño</strong>: Requerir autenticación en todas las rutas administrativas desde el primer acceso.
+- <strong>Implementación</strong>: Eliminar o deshabilitar endpoints de setup una vez completada la instalación inicial.
+- <strong>Buenas prácticas</strong>: Usar frameworks con controles de autorización integrados (Spring Security, Django auth, etc.).</p>
+<p><strong>Relaciones</strong>: Hijo de CWE-862 (Missing Authorization).<br />
+<strong>CAPECs relacionados</strong>: CAPEC-127, CAPEC-143, CAPEC-144, entre otros.</p>
+<p><img alt="Página principal de CWE-425" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img11.png" />
+<img alt="Posibles mitigaciones en CWE-425" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img12.png" />
+<img alt="Relaciones en CWE-425" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img13.png" /></p>
+<hr />
+<h2 id="patrones-de-ataque-relacionados-capec">Patrones de Ataque Relacionados (CAPEC)</h2>
+<p><strong>¿Qué es CAPEC?</strong><br />
+CAPEC (Common Attack Pattern Enumeration and Classification) es otro catálogo de MITRE que describe patrones comunes de ataque que explotan debilidades como las CWE.</p>
+<ul>
+<li><strong>CAPEC-143</strong> <a href="https://capec.mitre.org/data/definitions/143.html">enlace</a>: <em>Detect Unpublicized Web Pages</em><br />
+  Consiste en adivinar o enumerar URLs no enlazadas públicamente (como páginas de setup o admin ocultas).<br />
+<strong>Requisitos</strong>: Acceso a la aplicación expuesta (muy bajo).<br />
+<strong>Consecuencias</strong>: Bypass de autenticación, acceso a funcionalidades críticas.<br />
+<strong>Mitigación</strong>: No exponer endpoints innecesarios, usar autenticación en profundidad.</li>
+</ul>
+<p><img alt="Página principal de CAPEC-143" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img14.png" /></p>
+<ul>
+<li><strong>CAPEC-127</strong> <a href="https://capec.mitre.org/data/definitions/127.html">enlace</a>: <em>Directory Indexing</em><br />
+  Similar, pero enfocado en listar contenidos de directorios mal configurados.<br />
+<strong>Habilidades</strong>: Muy bajas (herramientas automáticas o fuzzing simple).<br />
+<strong>Mitigación</strong>: Deshabilitar directory listing en el servidor web.</li>
+</ul>
+<p><img alt="Página principal de CAPEC-127" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img15.png" /></p>
+<hr />
+<h2 id="registro-cve-en-json">Registro CVE en JSON</h2>
+<p><strong>¿Qué es el CVE Record en JSON?</strong><br />
+Es la representación estructurada (formato JSON) del registro CVE, mantenida por MITRE/CNA. Se usa para alimentación automática de herramientas de seguridad (scanners, SIEM, bases de datos internas).</p>
+<p>Enlace: <a href="https://cveawg.mitre.org/api/cve/CVE-2024-0204">https://cveawg.mitre.org/api/cve/CVE-2024-0204</a></p>
+<p>Enlace: <a href="https://github.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/blob/main/archivos/CVE-2024-0204.json">CVE-2024-0204.json</a></p>
+<p>Contiene:
+- Metadatos (fecha de publicación, estado)
+- Descripción oficial
+- Referencias
+- Weaknesses (CWE-425)
+- Posible CPE (plataformas afectadas)</p>
+<p><img alt="Vista del JSON con secciones clave" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img16.png" /></p>
+<hr />
+<h2 id="conclusiones-resumen-final">Conclusiones / Resumen Final</h2>
+<ul>
+<li><strong>CVE-2024-0204</strong> es una vulnerabilidad <strong>crítica</strong> (CVSS 9.8) de omisión de autenticación que permite takeover administrativo remoto sin credenciales.</li>
+<li><strong>Cadena de trazado</strong>: INCIBE → Fortra → CVE.org → NVD → CWE-425 → CAPEC-143/127 → JSON estructurado.</li>
+<li><strong>Riesgo real</strong>: Muy alto en entornos expuestos (historial de explotación masiva en GoAnywhere por Cl0p).</li>
+<li><strong>Lección principal</strong>: Los endpoints de configuración inicial deben desactivarse inmediatamente tras la instalación.</li>
+<li><strong>Recomendaciones prácticas</strong>:</li>
+<li>Aplicar parche o workaround lo antes posible.</li>
+<li>Monitorear accesos al puerto 8000/8443 (puertos por defecto de GoAnywhere).</li>
+<li>Implementar WAF con reglas anti-forced browsing.</li>
+<li>Revisar si se expone innecesariamente a internet.</li>
+</ul>
+<p>Este trazado ilustra perfectamente cómo las diferentes listas y bases de datos están interconectadas para un análisis completo de cualquier vulnerabilidad.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

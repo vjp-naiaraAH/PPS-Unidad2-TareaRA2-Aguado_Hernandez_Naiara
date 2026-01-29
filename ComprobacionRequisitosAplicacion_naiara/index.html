@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>3. Comprobación requisitos - PPS-Unidad2-TareaRA-Aguado-Hernandez-Naiara</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">PPS-Unidad2-TareaRA-Aguado-Hernandez-Naiara</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../TrazadoVulnerabilidadGoAnywhere/" class="nav-link">1. Trazado de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../analisisVulnerabilidad/" class="nav-link">2. Análisis de vulnerabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">3. Comprobación requisitos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../reflexion/" class="nav-link">4. Reflexión</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../analisisVulnerabilidad/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../reflexion/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#comprobacion-de-requisitos-de-seguridad" class="nav-link">Comprobación de Requisitos de Seguridad</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-nivel-de-seguridad-requerido-por-la-aplicacion" class="nav-link">1. Nivel de seguridad requerido por la aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-hoja-de-calculo-cumplimentada" class="nav-link">2. Hoja de cálculo cumplimentada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-analisis-del-grado-de-cobertura" class="nav-link">3. Análisis del grado de cobertura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-herramientas-automaticas-que-podrian-ayudar" class="nav-link">4. Herramientas automáticas que podrían ayudar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-valoracion-personal-del-owasp-asvs" class="nav-link">5. Valoración personal del OWASP ASVS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="comprobacion-de-requisitos-de-seguridad">Comprobación de Requisitos de Seguridad</h1>
+<h2 id="1-nivel-de-seguridad-requerido-por-la-aplicacion">1. Nivel de seguridad requerido por la aplicación</h2>
+<p>La aplicación consiste en dos scripts Python sencillos (<code>lavadero.py</code> y <code>main_app.py</code>) que simulan el funcionamiento de un túnel de lavado de coches mediante una máquina de estados en consola.  </p>
+<p>Características clave que determinan el nivel de seguridad ASVS:</p>
+<ul>
+<li>Es una aplicación de <strong>consola local</strong>, ejecutada directamente en el equipo del desarrollador/estudiante (no hay servidor, no hay interfaz web, no hay API).</li>
+<li>No existe autenticación de usuarios, gestión de sesiones ni roles.</li>
+<li>No recibe entrada de fuentes externas no confiables: los parámetros (prelavado, secado, encerado) se pasan directamente en el código o como argumentos fijos en ejemplos de prueba. No hay lectura de stdin interactiva peligrosa, ni parámetros HTTP, ni ficheros subidos, ni conexiones a red.</li>
+<li>No maneja ni almacena datos sensibles (PII, financieros, médicos, contraseñas, claves, etc.). Solo acumula un valor numérico de ingresos simulados en memoria.</li>
+<li>No utiliza dependencias externas (solo librerías estándar de Python: ninguna instalación vía pip).</li>
+<li>No hay operaciones criptográficas, logging persistente, uploads/downloads, deserialización de datos no confiables, llamadas a comandos del sistema ni acceso a recursos del sistema de forma peligrosa.</li>
+<li>Las únicas "entradas" son booleanos controlados por el programador; no hay riesgo real de inyección, overflow, path traversal, etc.</li>
+</ul>
+<p>Por todo ello, el nivel de seguridad <strong>más adecuado</strong> según OWASP ASVS es el <strong>Nivel 1</strong> (L1 – Opportunistic / Protección contra vulnerabilidades fáciles de descubrir y ataques automatizados básicos).</p>
+<ul>
+<li><strong>Nivel 2</strong> ya requeriría controles que no aplican aquí (TLS obligatorio, logging de seguridad detallado, protección contra CSRF, gestión segura de secretos, etc.).</li>
+<li><strong>Nivel 3</strong> es para aplicaciones críticas con requisitos de alta assurance (HSM, re-autenticación frecuente, auditoría estricta, etc.).</li>
+</ul>
+<p>En resumen: <strong>ASVS Nivel 1</strong> es suficiente y realista para esta aplicación sin exposición ni valor real en juego.</p>
+<h2 id="2-hoja-de-calculo-cumplimentada">2. Hoja de cálculo cumplimentada</h2>
+<p>He descargado la plantilla OWASP ASVS checklist for audits (versión 4.0.2) y la he renombrado como <strong>ASVS-Checklist-Naiara.xlsx</strong>.</p>
+<p>Archivo subido en la tarea: <a href="https://github.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/blob/main/archivos/ASVS-Checklist-naiara.ods">ASVS-Checklist-Naiara.ods</a></p>
+<p>He rellenado principalmente las secciones solicitadas en la actividad:</p>
+<ul>
+<li><strong>Input Validation</strong> (hoja 5): varios requisitos marcados como "Valid" o "Non-valid" con comentarios y referencias al código.</li>
+<li><strong>Malicious Code</strong> (hoja 10): la mayoría marcados como "Not Applicable" por ser una aplicación de Nivel 1 y sin carga dinámica de código, sin permisos excesivos, sin phone-home, etc.</li>
+</ul>
+<p>En la pestaña <strong>ASVS_Results</strong> se observa:</p>
+<ul>
+<li>Cumplimiento total: <strong>~1.09%</strong> (3 de 276 criterios cumplidos).</li>
+<li>Única categoría con algo de cumplimiento: <strong>Input Validation</strong> (~11.11%).</li>
+<li>Todas las demás categorías a <strong>0%</strong>.</li>
+</ul>
+<p>Esto es completamente esperable dada la simplicidad extrema de la aplicación.</p>
+<p><strong>Capturas de pantalla:</strong>
+- Resultados globales y gráfico de telaraña:<br />
+<img alt="Resultados globales" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img41.png" /></p>
+<ul>
+<li>
+<p>Sección Input Validation (detalle):<br />
+<img alt="Input Validation" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img42.png" /></p>
+</li>
+<li>
+<p>Sección Malicious Code (detalle):<br />
+<img alt="Malicious Code" src="https://raw.githubusercontent.com/vjp-naiaraAH/PPS-Unidad2-TareaRA2-Aguado_Hernandez_Naiara/refs/heads/main/images/img43.png" /></p>
+</li>
+</ul>
+<h2 id="3-analisis-del-grado-de-cobertura">3. Análisis del grado de cobertura</h2>
+<p>El porcentaje global de cumplimiento es extremadamente bajo (<strong>1.09%</strong>), con solo 3 criterios validados de 276 totales. La única categoría que muestra algo de cumplimiento es <strong>Input Validation</strong> (11.11%), mientras que el resto de secciones (Arquitectura, Autenticación, Sesiones, Acceso, Criptografía, Logging, etc.) están al 0%.</p>
+<p><strong>Reflexión:</strong></p>
+<p>Esta cobertura tan baja <strong>no indica que la aplicación sea insegura</strong>, sino que es <strong>demasiado simple</strong> para que la gran mayoría de los controles ASVS sean aplicables. ASVS está diseñado principalmente para aplicaciones web con exposición a internet, usuarios, sesiones, APIs, bases de datos, uploads, etc. — superficies de ataque que aquí simplemente no existen.</p>
+<p>Lo positivo es que, en los pocos puntos que sí aplican (principalmente validación básica de parámetros booleanos y ausencia de deserialización o comandos peligrosos), la aplicación cumple razonablemente bien. No hay riesgo real de inyección, IDOR, deserialización insegura, etc., porque no hay entrada no confiable ni parsing de formatos complejos.</p>
+<p>En conclusión: el bajo porcentaje refleja la naturaleza educativa y minimalista del proyecto, no una falta grave de seguridad. Para una aplicación real con usuarios y exposición, el porcentaje debería ser mucho más alto (idealmente apuntando a Nivel 2).</p>
+<h2 id="4-herramientas-automaticas-que-podrian-ayudar">4. Herramientas automáticas que podrían ayudar</h2>
+<p>Aunque la aplicación es muy pequeña y no tiene dependencias externas ni código con patrones de alto riesgo, algunas herramientas automáticas que podrían usarse para verificar requisitos ASVS (especialmente en Input Validation, Malicious Code y malas prácticas generales en Python) son:</p>
+<ul>
+<li><strong>Bandit</strong>: analizador estático de seguridad específico para Python. Detecta automáticamente usos inseguros de <code>pickle</code>, <code>subprocess</code> sin sanitizar, <code>os.system</code>, <code>eval</code>, hashlib débil, etc. Muy útil para validar contra inyecciones y deserialización insegura (5.5.x).</li>
+<li><strong>Semgrep</strong>: motor de búsqueda de patrones con reglas ASVS integradas. Permite buscar código vulnerable (asignación masiva, comandos sin escape, etc.) y es muy potente para requisitos como 5.1.x, 5.3.x o 10.x.</li>
+<li><strong>Safety</strong> o <strong>pip-audit</strong>: chequean vulnerabilidades conocidas en dependencias de PyPI. En este caso no aplicaría porque no hay requirements.txt ni paquetes externos.</li>
+</ul>
+<p>No he ejecutado estas herramientas porque el código es mínimo, usa solo stdlib y no presenta patrones peligrosos evidentes. Sin embargo, serían las más recomendables para proyectos Python más complejos.</p>
+<h2 id="5-valoracion-personal-del-owasp-asvs">5. Valoración personal del OWASP ASVS</h2>
+<p>OWASP ASVS me parece un estándar <strong>muy completo y valioso</strong> para proyectos reales, especialmente aplicaciones web empresariales, APIs o sistemas con datos sensibles. Proporciona una lista estructurada, objetiva y actualizada de controles que ayudan a no olvidar aspectos críticos (autenticación, validación, logging, configuración segura, etc.).</p>
+<p><strong>Ventajas</strong>:
+- Es independiente de tecnologías → se puede aplicar a Python, Java, .NET, etc.
+- Tiene niveles progresivos (L1 básico, L2 estándar, L3 alto) que permiten adaptarlo al riesgo real.
+- Incluye referencias útiles (CWE, NIST, Proactive Controls) que facilitan el aprendizaje.
+- Sirve tanto para desarrollo (como checklist) como para auditorías/pentesting.</p>
+<p><strong>Dificultades / limitaciones</strong>:
+- Para aplicaciones muy simples o educativas como esta (scripts locales sin red ni usuarios), se siente como <strong>overkill</strong> — la mayoría de requisitos no aplican y el porcentaje queda ridículamente bajo.
+- Requiere tiempo y conocimiento para rellenar correctamente la hoja (sobre todo decidir "Not Applicable" vs "Non-valid").
+- Está muy orientado a aplicaciones web → para apps de consola, desktop, IoT o embebidas, hay que interpretar muchos puntos con sentido común.</p>
+<p>En definitiva: <strong>excelente herramienta para proyectos serios</strong>, pero en ejercicios académicos pequeños sirve más como ejercicio de reflexión que como verificación real de seguridad. Me ha ayudado a entender mejor qué vulnerabilidades "no existen" en mi app precisamente por su diseño minimalista.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
