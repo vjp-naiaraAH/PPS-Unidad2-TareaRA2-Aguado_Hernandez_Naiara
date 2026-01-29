@@ -1,10 +1,10 @@
 # Reflexión sobre los riesgos de las aplicaciones
 
 Durante esta unidad hemos trabajado con aplicaciones que presentan vulnerabilidades reales o intencionadas, como **GoAnywhere MFT** (en el trazado de vulnerabilidad del Apartado 1) y una aplicación de laboratorio vulnerable (utilizada en el Apartado 3 para aplicar el estándar OWASP ASVS). Estas prácticas me han permitido entender no solo cómo se explotan fallos de seguridad, sino también por qué algunos riesgos son tolerables en entornos de pruebas y absolutamente inaceptables en producción.
+
 ---
 
 ### Principales riesgos identificados en la aplicación analizada
-
 En el análisis del Apartado 3, al evaluar los requisitos ASVS (principalmente Nivel 1 y partes del Nivel 2), detectamos fallos críticos que se alinean directamente con varias categorías del **OWASP Top 10** (2021):
 
 - **A01:2021 - Broken Access Control**: La aplicación permitía accesos no autorizados a funciones administrativas simplemente modificando parámetros en la URL o cookies.
