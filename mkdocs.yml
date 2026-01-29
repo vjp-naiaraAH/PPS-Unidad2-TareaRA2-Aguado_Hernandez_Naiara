@@ -11,9 +11,11 @@ site_name: PPS-Unidad2-TareaRA2-Aguado-Hernandez-Naiara # Define el título que 
 # Define la lista de enlaces y el orden de aparición en el menú de navegación principal.
 nav:
   # El nombre de la sección en el menú: nombre_archivo.md
-  - Home: index.md             # Primer elemento del menú, enlaza con el archivo 'index.md'.
-  - Uso: guia_uso.md           # Segundo elemento del menú, enlaza con el archivo 'guia_uso.md'.
-  # Se pueden añadir subsecciones anidando listas:
+  - Inicio: index.md
+  - Apartado 1 - Trazado de vulnerabilidad: TrazadoVulnerabilidadGoAnywhere.md   # o el nombre exacto que tengas
+  - Apartado 2 - Análisis de vulnerabilidad: analisisVulnerabilidad.md
+  - Apartado 3 - Comprobación requisitos: ComprobacionRequisitosAplicacion_naiara.md
+  - Apartado 4 - Reflexión: reflexion.md# Se pueden añadir subsecciones anidando listas:
   # - Referencia: 
   #   - Funciones: referencia/funciones.md
   #   - Clases: referencia/clases.md
@@ -23,7 +25,7 @@ nav:
 # -------------------------------------------------------------
 # Ruta de la carpeta que contiene todos los archivos .md (Markdown) de la documentación.
 # MkDocs buscará aquí los archivos listados en 'nav'.
-doc_dir: docs 
+docs_dir: docs 
 # -------------------------------------------------------------
 # TEMA (Opcional, pero común)
 # -------------------------------------------------------------
