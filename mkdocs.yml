@@ -11,10 +11,10 @@ site_name: PPS-Unidad2-TareaRA-Aguado-Hernandez-Naiara # Define el título que a
 # Define la lista de enlaces y el orden de aparición en el menú de navegación principal.
 nav:
   # El nombre de la sección en el menú: nombre_archivo.md  - Inicio: README.md
-  - Apartado 1 - Trazado de vulnerabilidad: TrazadoVulnerabilidadGoAnywhere.md   # o el nombre exacto que tengas
-  - Apartado 2 - Análisis de vulnerabilidad: analisisVulnerabilidad.md
-  - Apartado 3 - Comprobación requisitos: ComprobacionRequisitosAplicacion_naiara.md
-  - Apartado 4 - Reflexión: reflexion.md
+  - 1. Trazado de vulnerabilidad: TrazadoVulnerabilidadGoAnywhere.md   # o el nombre exacto que tengas
+  - 2. Análisis de vulnerabilidad: analisisVulnerabilidad.md
+  - 3. Comprobación requisitos: ComprobacionRequisitosAplicacion_naiara.md
+  - 4. Reflexión: reflexion.md
   # - Referencia: 
   #   - Funciones: referencia/funciones.md
   #   - Clases: referencia/clases.md
